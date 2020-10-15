@@ -1,0 +1,172 @@
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1170px;
+  box-sizing: border-box;
+  @include top-padding($padding-top-bottom-desktop);
+  margin: 0 auto;
+  background-color: white;
+}
+
+.about-us__info {
+  position: relative;
+  width: 1170px;
+  box-sizing: border-box;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    background-image: url("../img/girl1.png");
+    width: 139px;
+    height: 141px;
+  }
+}
+
+.about-us__info-photo {
+  border: 6px solid $dark-green;
+  border-radius: 7px;
+  width: 589px;
+  height: 446px;
+}
+
+.about-us__photos-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  @include list-reset;
+}
+
+.about-us__text-wrapper {
+  width: 470px;
+}
+
+.about-us h2,
+.about-us h3 {
+  @include header($desktop-header);
+  margin-bottom: 10px;
+}
+
+.about-us h3 {
+  font-size: 36px;
+}
+
+.about-us p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+@media (max-width: $tablet-width) {
+  .about-us {
+    width: 668px;
+    @include top-padding($padding-top-bottom-tablet);
+  }
+
+  .about-us__info {
+    width: 668px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      left: 10px;
+      bottom: -80px;
+      background-size: 110px 112px;
+      width: 110px;
+      height: 112px;
+    }
+  }
+
+  .about-us__photos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 668px;
+    box-sizing: border-box;
+    @include list-reset;
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  .about-us__text-wrapper {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .about-us__info-photo {
+    border: 3px solid $dark-green;
+    border-radius: 5px;
+    width: 400px;
+    height: auto;
+  }
+
+  .about-us h2,
+  .about-us h3 {
+    @include header($tablet-header);
+    margin-bottom: 10px;
+  }
+
+  .about-us h3 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .about-us {
+    width: 320px;
+    @include top-padding($padding-top-bottom-mobile);
+  }
+
+  .about-us__info {
+    width: 320px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .about-us__photos-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 320px;
+    box-sizing: border-box;
+    @include list-reset;
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  .about-us__text-wrapper {
+    width: auto;
+    margin-bottom: 20px;
+  }
+
+  .about-us__info-photo {
+    border: 2px solid $dark-green;
+    border-radius: 0;
+    width: 242px;
+    height: auto;
+  }
+
+  .about-us h2,
+  .about-us h3 {
+    @include header($mobile-header);
+    margin-bottom: 10px;
+  }
+
+  .about-us h3 {
+    font-size: 30px;
+  }
+}

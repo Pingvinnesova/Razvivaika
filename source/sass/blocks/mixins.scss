@@ -1,0 +1,43 @@
+@mixin list-reset() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin visually-hidden() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin side-padding($side-padding) {
+  padding-left: $side-padding;
+  padding-right: $side-padding;
+}
+
+@mixin top-padding($top-padding) {
+  padding-top: $top-padding;
+  padding-bottom: $top-padding;
+}
+
+@mixin padding-margin-reset() {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin header($header-size) {
+  font-family: "Neskid", "Arial", cursive;
+  font-size: $header-size;
+  line-height: $header-size * 1.5;
+  color: $orange;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 5px;
+}

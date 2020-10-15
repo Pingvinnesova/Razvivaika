@@ -1,0 +1,39 @@
+@font-face {
+  font-family: "RobotoCondensedRegular";
+  src:
+    url("../fonts/RobotoCondensedRegular.woff2") format("woff2"),
+    url("../fonts/RobotoCondensedRegular.woff") format("woff");
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoCondensedLight";
+  src:
+    url("../fonts/RobotoCondensedLight.woff2") format("woff2"),
+    url("../fonts/RobotoCondensedLight.woff") format("woff");
+  font-weight: light;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoCondensedBold";
+  src:
+    url("../fonts/RobotoCondensedBold.woff2") format("woff2"),
+    url("../fonts/RobotoCondensedBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeSkid";
+  src:
+    url("../fonts/NeSkid.woff2") format("woff2"),
+    url("../fonts/NeSkid.woff") format("woff");
+  font-weight: regular;
+  font-style: normal;
+  font-display: swap;
+}

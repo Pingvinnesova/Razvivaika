@@ -1,0 +1,64 @@
+.header {
+  background-color: rgba(white, 0.6);
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1170px;
+  max-width: $max-width;
+  box-sizing: border-box;
+  @include top-padding(15px);
+  // padding: 15px 30px;
+  margin: 0 auto;
+}
+
+.contacts__phone {
+  font-family: "NeSkid", "Arial", cursive;
+  font-size: 30px;
+  line-height: 45px;
+  color: $orange;
+  text-decoration: none;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+
+  &-little {
+    font-size: 19px;
+    line-height: 28px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .header__wrapper {
+    width: 668px;
+    // @include side-padding($padding-left-right-tablet);
+  }
+
+  .contacts__phone {
+    font-size: 20px;
+    line-height: 30px;
+
+    &-little {
+      font-size: 11px;
+      line-height: 16px;
+    }
+  }
+
+  .header__logo img {
+    width: 120px;
+    height: auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header__wrapper {
+    flex-direction: column;
+    width: 320px;
+    @include side-padding($padding-left-right-mobile);
+  }
+}
+

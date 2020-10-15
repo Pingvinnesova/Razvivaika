@@ -11,53 +11,83 @@
 
 <body>
   <header class="header">
-    <a href="index.html" class="header__logo logo">
-      <img src="img/logo.png" width="145" height="70" alt="Логотип детского центра «Развивайка»">
-    </a>
-    <div class="header__contacts contacts">
-      <a href="tel:+375296841300" class="contacts__phone"><span class="contacts__phone-little">+375 (29) </span>6841300
+    <div class="header__wrapper">
+      <a href="index.html" class="header__logo logo">
+        <img src="img/logo.png" width="145" height="70" alt="Логотип детского центра «Развивайка»">
       </a>
-      <ul class="contacts__socials">
-        <li class="contacts__socials-item">
-          <a href="vk.com" class="contacts__socials-link">
-            <img src="img/vk.png" width="28" height="17" alt="Логотип Вконтакте">
-          </a>
-        </li>
-        <li class="contacts__socials-item">
-          <a href="odnoklassniki.ru" class="contacts__socials-link">
-            <img src="img/ok.png" width="17" height="25" alt="Логотип Одноклассники">
-          </a>
-        </li>
-        <li class="contacts__socials-item">
-          <a href="instagram.com"  width="25" height="25" class="contacts__socials-link">
-            <img src="img/insta.png" alt="Логотип Instagram">
-          </a>
-        </li>
-      </ul>
+      <div class="header__contacts contacts">
+        <a href="tel:+375296841300" class="contacts__phone"><span class="contacts__phone-little">+375 (29) </span> 684-13-00
+        </a>
+        <ul class="contacts__socials">
+          <li class="contacts__socials-item">
+            <a href="vk.com" class="contacts__socials-link">
+              <img src="img/vk.png" width="28" height="17" alt="Логотип Вконтакте">
+            </a>
+          </li>
+          <li class="contacts__socials-item">
+            <a href="odnoklassniki.ru" class="contacts__socials-link">
+              <img src="img/ok.png" width="17" height="25" alt="Логотип Одноклассники">
+            </a>
+          </li>
+          <li class="contacts__socials-item">
+            <a href="instagram.com"  width="25" height="25" class="contacts__socials-link">
+              <img src="img/insta.png" alt="Логотип Instagram">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </header>
   <main>
     <section class="promo">
       <h1 class="visually-hidden">Детский центр «Развивайка»</h1>
-      <div class="promo promo__slider">
+      <div class="promo__slider slider">
         <ul class="slider__list">
-          <li class="slider__item slider__item--animators">
+          <li class="slider__item slider__item--animators slider__item--active">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/slide1-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/slide1-tablet.jpg">
+              <img src="img/slide1-mobile.jpg" alt="Аниматоры">
+            </picture>
             <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
           </li>
           <li class="slider__item slider__item--logopedist">
-            <a href="#form" class="slider__button scroll-to">оставить заявку</a>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/slide3-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/slide3-tablet.jpg">
+              <img src="img/slide3-mobile.jpg" alt="Аниматоры">
+            </picture>
+            <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
           </li>
           <li class="slider__item slider__item--education">
-            <a href="#form" class="slider__button scroll-to">оставить заявку</a>
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/slide2-desktop.jpg">
+              <source media="(min-width: 768px)" srcset="img/slide2-tablet.jpg">
+              <img src="img/slide2-mobile.jpg" alt="Аниматоры">
+            </picture>
+            <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
           </li>
         </ul>
+        <div class="slider__switches">
+          <button class="slider__switch slider__switch--prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="slider__switch slider__switch--next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+        </div>
       </div>
     </section>
 
     <section class="about-us">
       <div class="about-us__info">
-        <h2 class="about-us__title">О нас</h2>
-        <p class="about-us__text">Детский ценр "Развивайка" работает для вас с 2013 года и сочетает в себе всё самое важное. Наши филиалы находятся в Новобелицком районе, на Сельмаше, в 17-м и Речицком микрорайонах г. Гомеля.
+        <div class="about-us__text-wrapper">
+          <h2 class="about-us__title">О нас</h2>
+          <p class="about-us__text">Детский ценр "Развивайка" работает для вас с 2013 года и сочетает в себе всё самое важное. Наши филиалы находятся в Новобелицком районе, на Сельмаше, в 17-м и Речицком микрорайонах г. Гомеля.
+        </div>
+        <div class="about-us__info-photo">
+          <img src="img/about-us.jpg" alt="Мы">
+        </div>
       </div>
       <div class="about-us__photos">
         <h3 class="about-us__photos-title">Наши будни</h3>
