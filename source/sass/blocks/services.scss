@@ -1,0 +1,211 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1170px;
+  box-sizing: border-box;
+  @include top-padding($padding-top-bottom-desktop);
+  margin: 0 auto;
+  background-color: white;
+}
+
+.services h2,
+.services h3 {
+  @include header($desktop-header);
+  margin-bottom: 10px;
+}
+
+.services p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 30px;
+}
+
+.services__select {
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  legend {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  select {
+    width: 340px;
+    text-align: center;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: $light-green;
+    color: white;
+    border: none;
+    font-size: 18px;
+    line-height: 27px;
+    border-radius: 5px;
+  }
+}
+
+.services__list {
+  @include list-reset;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.services__item {
+  display: flex;
+  width: 1170px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 30px;
+
+  img {
+    margin-bottom: 10px;
+    width: 284px;
+    height: 290px;
+  }
+
+  &-image {
+    width: 284px;
+    background-color: $light-green;
+    background-image: url("../img/decoration.png");
+  }
+
+  &-description {
+    width: 780px;
+
+    h4 {
+      margin-top: 0;
+    }
+
+    p {
+      margin: 0 0 7px 0;
+    }
+  }
+
+  &-image-text {
+    width: 294px;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-align: center;
+
+    h3 {
+      font-size: 28px;
+      line-height: 42px;
+      color: $pink;
+      text-shadow: 3px 3px 5px white;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 27px;
+    }
+
+    span {
+      display:  block;
+      font-family: "Neskid", "Arial", cursive;
+      color: $pink;
+      font-size: 24px;
+      line-height: 36px;
+      text-shadow: 2px 2px 4px white;
+    }
+  }
+}
+
+.services__button {
+  position: relative;
+  background-color: $pink;
+  color: white;
+
+  &:hover {
+    background-color: $violet;
+    color: white;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../img/butterfly.png");
+    top: -15px;
+    right: 0;
+    width: 39px;
+    height: 35px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .services {
+    width: 678px;
+    @include top-padding($padding-top-bottom-tablet);
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+
+  .services h2 {
+    @include header($tablet-header);
+    margin-bottom: 10px;
+  }
+
+  .services__item {
+    width: 578px;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+
+    img {
+      margin-bottom: 0;
+      width: auto;
+      height: 100%;
+    }
+
+    &-description {
+      display: none;
+    }
+
+    &-image {
+      width: 578px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &-image-text {
+      width: 320px;
+      padding: 0 10px;
+      padding-top: 10px;
+
+      h3 {
+        font-size: 24px;
+        line-height: 36px;
+        color: $pink;
+        text-shadow: 3px 3px 5px white;
+      }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 0;
+    }
+
+    span {
+      display:  block;
+      font-family: "Neskid", "Arial", cursive;
+      color: $pink;
+      font-size: 20px;
+      line-height: 30px;
+      text-shadow: 2px 2px 4px white;
+    }
+  }
+  }
+
+  .services__button {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 15px 35px;
+    border-radius: 15px;
+  }
+}
