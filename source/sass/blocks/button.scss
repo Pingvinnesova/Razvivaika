@@ -12,6 +12,15 @@
 
 @media (max-width: $tablet-width) {
   .button {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 13px 33px;
+    border-radius: 14px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .button {
     font-size: 8px;
     line-height: 12px;
     padding: 10px 20px;

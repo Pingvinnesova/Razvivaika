@@ -3,11 +3,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1170px;
+  width: 1175px;
   box-sizing: border-box;
   @include top-padding($padding-top-bottom-desktop);
+  @include side-padding($padding-left-right-desktop);
   margin: 0 auto;
   background-color: white;
+  margin-bottom: 65px;
 }
 
 .services h2,
@@ -53,15 +55,15 @@
   @include list-reset;
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .services__item {
   display: flex;
-  width: 1170px;
+  width: 1075px;
   justify-content: space-between;
-  box-sizing: border-box;
-  padding: 0 30px;
+  // box-sizing: border-box;
+  // padding: 0 30px;
 
   img {
     margin-bottom: 10px;
@@ -76,7 +78,7 @@
   }
 
   &-description {
-    width: 780px;
+    width: 750px;
 
     h4 {
       margin-top: 0;
@@ -137,13 +139,15 @@
   }
 }
 
+.services__more {
+  display: none;
+}
+
 @media (max-width: $tablet-width) {
   .services {
-    width: 678px;
+    width: 768px;
     @include top-padding($padding-top-bottom-tablet);
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
+    @include side-padding($padding-left-right-tablet);
   }
 
   .services h2 {
@@ -152,54 +156,15 @@
   }
 
   .services__item {
-    width: 578px;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 50px;
+    width: 668px;
 
     img {
-      margin-bottom: 0;
-      width: auto;
-      height: 100%;
-    }
-
-    &-description {
-      display: none;
-    }
-
-    &-image {
-      width: 578px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    &-image-text {
-      width: 320px;
-      padding: 0 10px;
-      padding-top: 10px;
-
-      h3 {
-        font-size: 24px;
-        line-height: 36px;
-        color: $pink;
-        text-shadow: 3px 3px 5px white;
-      }
-
-    p {
-      font-size: 16px;
-      line-height: 24px;
-      margin-bottom: 0;
-    }
-
-    span {
-      display:  block;
-      font-family: "Neskid", "Arial", cursive;
-      color: $pink;
-      font-size: 20px;
-      line-height: 30px;
-      text-shadow: 2px 2px 4px white;
+      margin-bottom: 30px;
     }
   }
+
+  .services__item-description {
+    width: 365px;
   }
 
   .services__button {
@@ -207,5 +172,78 @@
     line-height: 24px;
     padding: 15px 35px;
     border-radius: 15px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .services {
+    width: 320px;
+    @include top-padding($padding-top-bottom-mobile);
+    @include side-padding($padding-left-right-mobile);
+  }
+
+  .services h2 {
+    @include header($mobile-header);
+    margin-bottom: 10px;
+  }
+
+  .services__item {
+    width: 260px;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      margin-bottom: 10px;
+      width: 260px;
+      height: auto;
+    }
+
+    &-image {
+      width: 260px;
+      margin-bottom: 20px;
+    }
+
+    &-image-text {
+      width: 260px;
+
+      h3 {
+        font-size: 26px;
+        line-height: 39px;
+        color: $pink;
+        text-shadow: 3px 3px 5px white;
+      }
+    }
+  }
+
+  .services__item-description {
+    display: none;
+    width: 240px;
+
+    h4 {
+      text-align: center;
+    }
+  }
+
+  .services__item-description--shown {
+    display: block;
+  }
+
+  .services__button {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 15px 35px;
+    border-radius: 15px;
+  }
+
+  .services__select {
+    select {
+      width: 260px;
+    }
+  }
+
+  .services__more {
+    display: block;
+    background-color: transparent;
+    border: none;
   }
 }

@@ -1,176 +1,145 @@
 .slider {
+  width: 100%;
   position: relative;
-  width: 1170px;
-  margin: 0 auto;
-  box-sizing: border-box;
+}
+
+.slider__list {
+  width: 100%;
 }
 
 .slider__switch {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  background-color: rgba($orange, 0.3);
-  border: none;
-  border-radius: 50%;
-  top: 50%;
-  transform: translateY(-50%);
-  cursor: pointer;
-
-  &:hover {
-    background-color: rgba($orange, 0.8);
-  }
-}
-
-.slider__switch--prev {
-  left: 1%;
-
-  &:before {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 2px;
-    background-color: white;
-    top: 42%;
-    left: 33%;
-    transform: rotate(-35deg);
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 2px;
-    background-color: white;
-    top: 55%;
-    left: 33%;
-    transform: rotate(35deg);
-  }
-}
-
-.slider__switch--next {
-  right: 1%;
-
-    &:before {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 2px;
-    background-color: white;
-    top: 42%;
-    left: 33%;
-    transform: rotate(35deg);
-  }
-
-  &:after {
-    content: "";
-    position: absolute;
-    width: 8px;
-    height: 2px;
-    background-color: white;
-    top: 55%;
-    left: 33%;
-    transform: rotate(-35deg);
-  }
-}
-
-.slider__list {
-  @include list-reset;
-  width: 100%;
+  background-image: url("../img/.svg");
 }
 
 .slider__item {
   display: none;
-  position: relative;
-  width: 1170px;
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .slider__item--active {
   display: block;
 }
 
-// .slider__item--animators {
-//   background-image: url("../img/slide1-desktop.jpg");
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
+.slider-item__wrapper {
+  position: relative;
+  width: 1175px;
+  min-height: 632px;
+  margin: 0 auto;
+}
 
-.slider__item--animators a {
+.slider__item--animators {
+  background-color: #371a55;
+
+  a {
   position: absolute;
-  bottom: 10%;
-  left: 30%;
+  bottom: 15%;
+  left: 24%;
   background-color: white;
   color: $violet;
 
-  &:hover {
-    background-color: #ff5cd5;
-    color: white;
+    &:hover {
+      background-color: #ff5cd5;
+      color: white;
+    }
   }
 }
 
-.slider__item--logopedist a {
+.slider__item--logopedist {
+  background-color: $light-green;
+
+  a {
+    position: absolute;
+    bottom: 13%;
+    left: 21.5%;
+    background-color: $pink;
+    color: white;
+
+    &:hover {
+      background-color: $dark-green;
+      color: white;
+    }
+  }
+}
+
+.slider__item--education {
+  background-color: #0bb6ff;
+
+  a {
+    position: absolute;
+    bottom: 93px;
+    left: 22%;
+    background-color: $pink;
+    color: white;
+
+    &:hover {
+      background-color: #004359;
+      color: white;
+    }
+  }
+}
+
+.slider__dots-list {
   position: absolute;
-  bottom: 10%;
-  left: 23%;
-  background-color: $pink;
-  color: white;
+  display: flex;
+  justify-content: space-between;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(white, 0.5);
+  margin-right: 10px;
+  cursor: pointer;
 
   &:hover {
-    background-color: $dark-green;
-    color: white;
+    background-color: white;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
   }
 }
 
-.slider__item--education a {
-  position: absolute;
-  bottom: 10%;
-  left: 15%;
-  background-color: $pink;
-  color: white;
-
-  &:hover {
-    background-color: #004359;
-    color: white;
-  }
+.slider__dot--active {
+  background-color: white;
 }
-
 
 @media (max-width: $tablet-width) {
-  .slider {
-    width: 668px;
-    min-height: 296px;
-  }
-
-  .slider__item {
-    width: 668px;
-    padding: 0;
+  .slider-item__wrapper {
+    width: 778px;
+    min-height: 478px;
+    margin: 0 auto;
   }
 
   .slider__item--animators a {
-    bottom: 10%;
-    left: 28.5%;
-  }
-
-  .slider__switch {
-    width: 25px;
-    height: 25px;
+    bottom: 16%;
+    left: 17.5%;
   }
 
   .slider__item--logopedist a {
-    left: 22%;
+    left: 16.5%;
+    bottom: 18%;
+  }
+
+  .slider__item--education a {
+    left: 19%;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .slider {
+  .slider-item__wrapper {
     width: 320px;
+    min-height: 296px;
+    margin: 0 auto;
   }
 
   .slider__item {
-    width: 320px;
-    padding: 0;
+    background-color: transparent;
   }
 
   .slider__item--animators a,
@@ -178,5 +147,12 @@
   .slider__item--education a {
     left: 50%;
     transform: translateX(-50%);
+    bottom: 15%;
+  }
+
+  .slider__dot {
+    width: 7px;
+    height: 7px;
+    margin-right: 7px;
   }
 }

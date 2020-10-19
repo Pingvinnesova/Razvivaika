@@ -11,70 +11,69 @@
 
 <body>
   <header class="header">
-    <div class="header__wrapper">
-      <a href="index.html" class="header__logo logo">
-        <img src="img/logo.png" width="145" height="70" alt="Логотип детского центра «Развивайка»">
-      </a>
-      <div class="header__contacts contacts">
-        <a href="tel:+375296841300" class="contacts__phone"><span class="contacts__phone-little">+375 (29) </span> 684-13-00
+    <ul class="header__socials">
+      <li class="header__socials-item">
+        <a href="vk.com" class="header__socials-link">
+          <img src="img/vk.png" width="28" height="17" alt="Логотип Вконтакте">
         </a>
-        <ul class="contacts__socials">
-          <li class="contacts__socials-item">
-            <a href="vk.com" class="contacts__socials-link">
-              <img src="img/vk.png" width="28" height="17" alt="Логотип Вконтакте">
-            </a>
-          </li>
-          <li class="contacts__socials-item">
-            <a href="odnoklassniki.ru" class="contacts__socials-link">
-              <img src="img/ok.png" width="17" height="25" alt="Логотип Одноклассники">
-            </a>
-          </li>
-          <li class="contacts__socials-item">
-            <a href="instagram.com"  width="25" height="25" class="contacts__socials-link">
-              <img src="img/insta.png" alt="Логотип Instagram">
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+      </li>
+      <li class="header__socials-item">
+        <a href="odnoklassniki.ru" class="header__socials-link">
+          <img src="img/ok.png" width="17" height="25" alt="Логотип Одноклассники">
+        </a>
+      </li>
+      <li class="header__socials-item">
+        <a href="instagram.com"  width="25" height="25" class="header__socials-link">
+          <img src="img/insta.png" alt="Логотип Instagram">
+        </a>
+      </li>
+    </ul>
+    <a href="index.html" class="header__logo logo">
+      <img src="img/logo.png" width="145" height="70" alt="Логотип детского центра «Развивайка»">
+    </a>
+    <a href="tel:+375296841300" class="header__phone"><span class="header__phone-little">+375 (29) </span> 684-13-00
+    </a>
   </header>
   <main>
     <section class="promo">
       <h1 class="visually-hidden">Детский центр «Развивайка»</h1>
       <div class="promo__slider slider">
-        <ul class="slider__list">
-          <li class="slider__item slider__item--animators slider__item--active">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/slide1-desktop.jpg">
-              <source media="(min-width: 768px)" srcset="img/slide1-tablet.jpg">
-              <img src="img/slide1-mobile.jpg" alt="Аниматоры">
-            </picture>
-            <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
-          </li>
-          <li class="slider__item slider__item--logopedist">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/slide3-desktop.jpg">
-              <source media="(min-width: 768px)" srcset="img/slide3-tablet.jpg">
-              <img src="img/slide3-mobile.jpg" alt="Аниматоры">
-            </picture>
-            <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
-          </li>
-          <li class="slider__item slider__item--education">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="img/slide2-desktop.jpg">
-              <source media="(min-width: 768px)" srcset="img/slide2-tablet.jpg">
-              <img src="img/slide2-mobile.jpg" alt="Аниматоры">
-            </picture>
-            <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
-          </li>
-        </ul>
-        <div class="slider__switches">
-          <button class="slider__switch slider__switch--prev" type="button">
-            <span class="visually-hidden">Предыдущий слайд</span>
-          </button>
-          <button class="slider__switch slider__switch--next" type="button">
-            <span class="visually-hidden">Следующий слайд</span>
-          </button>
+        <div class="slider__list">
+          <div class="slider__item slider__item--animators    slider__item--active">
+            <div class="slider-item__wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/slide1-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/slide1-tablet.jpg">
+                <img src="img/slide1-mobile.jpg" alt="Аниматоры">
+              </picture>
+              <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
+            </div>
+          </div>
+          <div class="slider__item slider__item--logopedist">
+            <div class="slider-item__wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/slide3-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/slide3-tablet.jpg">
+                <img src="img/slide3-mobile.jpg" alt="Аниматоры">
+              </picture>
+              <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
+            </div>
+          </div>
+          <div class="slider__item slider__item--education">
+            <div class="slider-item__wrapper">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/slide2-desktop.jpg">
+                <source media="(min-width: 768px)" srcset="img/slide2-tablet.jpg">
+                <img src="img/slide2-mobile.jpg" alt="Аниматоры">
+              </picture>
+              <a href="#form" class="slider__button button scroll-to">оставить заявку</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider__dots-list">
+          <span class="slider__dot slider__dot--active"></span>
+          <span class="slider__dot"></span>
+          <span class="slider__dot"></span>
         </div>
       </div>
     </section>
@@ -133,23 +132,20 @@
       <ul class="services__list">
         <li class="services__item">
           <div class="services__item-image">
-              <picture>
-                <source media="(min-width: 1200px)" srcset="img/service1.png">
-                <img src="img/service1-tablet.png" alt="Развивающее занятие">
-              </picture>
+            <img src="img/service1.png" alt="Развивающее занятие">
             <div class="services__item-image-text">
               <h3 class="services__item-title">Развивающие занятия</h3>
               <p>Абонемент на 8 занятий –
-              <span class="services__item-price">44 рублей</span>
-              Абонемент на 4 занятия –
-              <span class="services__item-price">26 рублей</span>
-              Разовое посещение:
-              <span class="services__item-price">8 рублей</span>
-            </p>
+                <span class="services__item-price">44 рублей</span>
+                Абонемент на 4 занятия –
+                <span class="services__item-price">26 рублей</span>
+                Разовое посещение:
+                <span class="services__item-price">8 рублей</span>
+              </p>
             </div>
           </div>
-          <div class="services__item-description">
-            <h4>Развиваемся играя – основная идея наших занятий. Главное правило – бережное развитие.</h4>
+          <div class="services__item-description services__item-description--shown">
+            <h4>Развиваемся играя – основная идея наших занятий. Главное&nbsp;правило – бережное развитие.</h4>
 
             Занятия включают в себя:
             <p>✔ социальное развитие: игры и упражнения, направленные на общение с окружающими;</p>
@@ -169,6 +165,7 @@
             <p>⏰ Продолжительность занятий: круглый год.</p>
             <p>👼 Детей в группе: 6 человек.</p>
           </div>
+          <button type="button" class="services__more">Подробнее</button>
         </li>
       </ul>
       <a href="#form" class="services__button button scroll-to">оставить заявку</a>
@@ -178,33 +175,42 @@
       <h2>Наши филиалы:</h2>
         <ul class="adress__list">
           <li class="adress__item adress__item--borodina">
-            <div class="adress__photos">
-              <img src="img/borodina1.jpg" width="198" height="198" alt="Бородина, 4">
-              <img src="img/borodina2.jpg" width="198" height="198" alt="Бородина, 4">
-              <img src="img/borodina3.jpg" width="198" height="198" alt="Бородина, 4">
+            <div class="adress__item-wrapper">
+              <div class="adress__photos">
+                <img src="img/borodina1.jpg" width="198" height="198" alt="Бородина, 4">
+                <img src="img/borodina2.jpg" width="198" height="198" alt="Бородина, 4">
+                <img src="img/borodina3.jpg" width="198" height="198" alt="Бородина, 4">
+              </div>
+              <h3>Гомель, ул. Т.С.Бородина 4 (ост. “Ледовый дворец”)</h3>
             </div>
-            <h3>Гомель, ул. Т.С.Бородина 4 (ост. “Ледовый дворец”)</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303.88396277289263!2d31.02745154875368!3d52.45972886592141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d4692499d908ed%3A0xddaf378f103987cb!2z0JTQtdGC0YHQutC40Lkg0YDQsNC30LLQuNCy0LDRjtGJ0LjQuSDRhtC10L3RgtGAICLQoNCw0LfQstC40LLQsNC50LrQsCIg0JPQvtC80LXQu9GMIC0g0YDQsNC30LLQuNCy0LDRiNC60Lgg0Lgg0YXQvtGA0LXQvtCz0YDQsNGE0LjRjywg0LDQvdCz0LvQuNC50YHQutC40LksINCy0L7QutCw0LssINC70L7Qs9C-0L_QtdC0!5e0!3m2!1sru!2sby!4v1603018220895!5m2!1sru!2sby" width="1085" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </li>
           <li class="adress__item adress__item--orudijnaja">
-            <div class="adress__photos">
-              <img src="img/orudijnaja1.jpg" width="198" height="198" alt="Бородина, 4">
-              <img src="img/orudijnaja2.jpg" width="198" height="198" alt="Бородина, 4">
-              <img src="img/orudijnaja3.jpg" width="198" height="198" alt="Бородина, 4">
+            <div class="adress__item-wrapper">
+              <div class="adress__photos">
+                <img src="img/orudijnaja1.jpg" width="198" height="198" alt="Бородина, 4">
+                <img src="img/orudijnaja2.jpg" width="198" height="198" alt="Бородина, 4">
+                <img src="img/orudijnaja3.jpg" width="198" height="198" alt="Бородина, 4">
+              </div>
+              <h3>Гомель, ул. 2-ая Орудийная 15А/1 (ост. “завод “Кристалл””)</h3>
             </div>
-            <h3>Гомель, ул. 2-ая Орудийная 15А/1 (ост. “завод “Кристалл””)</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d609.1654903435771!2d31.03319730030311!3d52.3584160038061!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d45d474866b92b%3A0x33ce248853e34f6d!2z0YPQuy4g0J7RgNGD0LTQuNC50L3QsNGPIDIt0Y8gMTUsINCT0L7QvNC10LvRjCAyNDYwMTM!5e0!3m2!1sru!2sby!4v1603019123093!5m2!1sru!2sby" width="#" height="#" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </li>
           <li class="adress__item adress__item--rechicki">
-            <div class="adress__photos">
-              <img src="img/rechicki1.jpg" width="198" height="198" alt="Бородина, 4">
-              <img src="img/rechicki2.jpg" width="198" height="198" alt="Бородина, 4">
-              <img src="img/rechicki3.jpg" width="198" height="198" alt="Бородина, 4">
+            <div class="adress__item-wrapper">
+              <div class="adress__photos">
+                <img src="img/rechicki1.jpg" width="198" height="198" alt="Бородина, 4">
+                <img src="img/rechicki2.jpg" width="198" height="198" alt="Бородина, 4">
+                <img src="img/rechicki3.jpg" width="198" height="198" alt="Бородина, 4">
+              </div>
+              <h3>Гомель, Речицкий проспект, 65 (ост. “ТЦ ”Речицкий””)</h3>
             </div>
-            <h3>Гомель, Речицкий проспект, 65 (ост. “ТЦ ”Речицкий””)</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1216.9579559751016!2d30.92839274740424!3d52.4082001841504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d44209807a05ab%3A0xdf97e96d053de597!2z0KDQtdGH0LjRhtC60LjQuSDQv9GA0L7RgdC_LiA2NSwg0JPQvtC80LXQu9GM!5e0!3m2!1sru!2sby!4v1603019173187!5m2!1sru!2sby" width="1085" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </li>
         </ul>
     </section>
 
-    <section class="feedback">
+<!--     <section class="feedback">
       <h2>Отзывы</h2>
       <div class=feedback__switches>
         <button class="feedback__switches--left" type="button"><span class="visually-hidden"></span>Назад</button></li>
@@ -227,51 +233,50 @@
           <p>Вы крутые!</p>
         </li>
       </ul>
-    </section>
+    </section> -->
 
-    <section class="form">
-      <h2>Остались вопросы или хотите оставить заявку?</h2>
-      <p>Мы перезвоним!</p>
+    <section class="form" id="form">
+      <p>Остались вопросы или хотите оставить заявку?</p>
+      <h2>Мы перезвоним!</h2>
       <form class="form__input">
         <label for="form__name">Имя</label>
         <input id="form__name" type="text" name="name" required="">
         <label for="form__phone">Телефон</label>
         <input id="form__phone" type="tel" name="phone" required="">
         <label for="form__textarea">Ваш вопрос</label>
-        <textarea id="form__textarea" name="text"></textarea>
-        <label for="form__checkbox">Соглашаюсь на обработку персональных данных в соответствии с Политикой Конфиденциальности</label>
-        <input id="form__checkbox" type="checkbox" name="approval" checked>
-        <button type="submit">Отправить</button>
+        <textarea id="form__textarea" name="text">Ваш вопрос</textarea>
+<!--         <label for="form__checkbox">Соглашаюсь на обработку персональных данных в соответствии с Политикой Конфиденциальности</label>
+        <input id="form__checkbox" type="checkbox" name="approval" checked> -->
+        <button type="submit" class=" form__button button">Отправить</button>
       </form>
     </section>
 
-    <footer>
+    <footer class="footer">
+      <ul class="footer__socials">
+        <li class="footer__socials-item">
+          <a href="vk.com" class="footer__socials-link">
+            <img src="img/vk.png" width="28" height="17" alt="Логотип Вконтакте">
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="odnoklassniki.ru" class="footer__socials-link">
+            <img src="img/ok.png" width="17" height="25" alt="Логотип Одноклассники">
+          </a>
+        </li>
+        <li class="footer__socials-item">
+          <a href="instagram.com"  width="25" height="25" class="header__socials-link">
+            <img src="img/insta.png" alt="Логотип Instagram">
+          </a>
+        </li>
+      </ul>
       <a href="index.html" class="footer__logo logo">
         <img src="img/logo.png" width="145" height="70" alt="Логотип детского центра «Развивайка»">
       </a>
-      <div class="footer__contacts contacts">
-        <a href="tel:+375296841300" class="contacts__phone"><span class="contacts__phone-little">+375 (29) </span>6841300
-        </a>
-        <ul class="contacts__socials">
-          <li class="contacts__socials-item">
-            <a href="vk.com" class="contacts__socials-link">
-              <img src="img/vk.png" width="28" height="17" alt="Логотип Вконтакте">
-            </a>
-          </li>
-          <li class="contacts__socials-item">
-            <a href="odnoklassniki.ru" class="contacts__socials-link">
-              <img src="img/ok.png" width="17" height="25" alt="Логотип Одноклассники">
-            </a>
-          </li>
-          <li class="contacts__socials-item">
-            <a href="instagram.com"  width="25" height="25" class="contacts__socials-link">
-              <img src="img/insta.png" alt="Логотип Instagram">
-            </a>
-          </li>
-        </ul>
-      </div>
+      <a href="tel:+375296841300" class="footer__phone"><span class="footer__phone-little">+375 (29) </span> 684-13-00
+      </a>
     </footer>
   </main>
+<script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,200 @@
+.form {
+  position: relative;
+  background-color: $orange;
+  width: 1175px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  @include top-padding($padding-top-bottom-desktop);
+  box-sizing: border-box;
+  @include side-padding($padding-left-right-desktop);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+
+  p {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+  }
+
+  h2 {
+    @include header($desktop-header);
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/fly.png");
+    width: 80px;
+    height: 172px;
+    left: 74px;
+    top: 40%;
+    transform: translateY(-40%);
+  }
+
+  &:after{
+    content: "";
+    position: absolute;
+    background-image: url("../img/rocket.png");
+    width: 100px;
+    height: 225px;
+    right: 66px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.form__input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 606px;
+
+  label {
+    color: white;
+    align-self: flex-start;
+  }
+
+  input {
+    height: 30px;
+    border: none;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    margin-bottom: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  textarea {
+    border: none;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 40px;
+    color: $orange;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    min-height: 190px
+  }
+}
+
+.form__button {
+  width: 270px;
+  background-color: $light-green;
+  border: none;
+}
+
+@media (max-width: $tablet-width) {
+  .form {
+    width: 768px;
+    @include top-padding($padding-top-bottom-tablet);
+    @include side-padding($padding-left-right-tablet);
+
+    p {
+      color: white;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0;
+    }
+
+    h2 {
+      @include header($tablet-header);
+      color: white;
+      margin-bottom: 30px
+    }
+
+    &:before {
+      background-image: url("../img/fly.png");
+      background-size: 53px 114px;
+      width: 53px;
+      height: 114px;
+      left: 74px;
+      top: 40%;
+      transform: translateY(-40%);
+    }
+
+    &:after{
+      background-size: 66px 150px;
+      width: 66px;
+      height: 150px;
+      right: 66px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .form__input {
+    width: 334px;
+
+    input {
+      height: 30px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    textarea {
+      margin-bottom: 40px;
+      padding: 10px;
+      min-height: 108px
+    }
+  }
+
+  .form__button {
+    width: 151px;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    width: 320px;
+    @include top-padding($padding-top-bottom-mobile);
+    @include side-padding($padding-left-right-mobile);
+
+    p {
+      font-size: 13px;
+      line-height: 15px;
+      margin: 0;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      @include header(23px);
+      color: white;
+      margin-bottom: 30px
+    }
+
+    &:after,
+    &:before {
+      display: none;
+    }
+  }
+
+  .form__input {
+    width: 100%;
+
+    input {
+      height: 30px;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+
+    textarea {
+      margin-bottom: 40px;
+      padding: 10px;
+      min-height: 108px
+    }
+  }
+
+  .form__button {
+    width: 151px;
+    box-sizing: border-box;
+  }
+}

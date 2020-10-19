@@ -1,0 +1,145 @@
+.adress {
+  background-color: white;
+  width: 1175px;
+  margin-bottom: 20px;
+  margin: 0 auto;
+  @include top-padding($padding-top-bottom-desktop);
+  box-sizing: border-box;
+  @include side-padding($padding-left-right-desktop);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 65px;
+}
+
+.adress h2 {
+  @include header($desktop-header);
+  margin-bottom: 30px;
+}
+
+.adress__list {
+  @include list-reset;
+}
+
+.adress__item {
+  margin-bottom: 50px;
+
+  iframe {
+    width: 1085px;
+    height: 400px;
+  }
+}
+
+.adress__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 1085px;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .adress__photos {
+    width: 602px;
+  }
+
+  h3 {
+    position: relative;
+    width: 425px;
+    padding-left: 50px;
+    box-sizing: border-box;
+
+    &:before {
+      position: absolute;
+      content: "";
+      background-image: url("../img/pin.png");
+      width: 30px;
+      height: 46px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .adress {
+    width: 768px;
+    @include top-padding($padding-top-bottom-tablet);
+    @include side-padding($padding-left-right-tablet);
+  }
+
+  .adress h2 {
+    @include header($tablet-header);
+  }
+
+  .adress__item {
+    margin-bottom: 40px;
+
+    iframe {
+      width: 668px;
+      height: 300px;
+    }
+  }
+
+  .adress__item-wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 668px;
+
+    .adress__photos {
+      display: flex;
+      justify-content: space-between;
+      width: 668px;
+    }
+
+    h3 {
+      width: 425px;
+      padding-left: 50px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .adress {
+    width: 320px;
+    @include top-padding($padding-top-bottom-mobile);
+    @include side-padding($padding-left-right-mobile);
+  }
+
+  .adress h2 {
+    @include header($mobile-header);
+  }
+
+  .adress__item {
+    margin-bottom: 40px;
+
+    iframe {
+      width: 260px;
+      height: 500px;
+    }
+  }
+
+  .adress__item-wrapper {
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 260px;
+
+    .adress__photos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 260px;
+
+      img {
+        margin-bottom: 10px;
+      }
+    }
+
+    h3 {
+      width: 260px;
+      padding-left: 50px;
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-.header {
+.footer {
   background-color: transparent;
   width: 1175px;
   margin-bottom: 20px;
@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.header__phone {
+.footer__phone {
   font-family: "NeSkid", "Arial", cursive;
   font-size: 30px;
   line-height: 45px;
@@ -29,7 +29,7 @@
   }
 }
 
-.header__socials {
+.footer__socials {
   display: flex;
   @include list-reset;
   width: 100px;
@@ -39,14 +39,14 @@
 }
 
 @media (max-width: $tablet-width) {
-  .header {
+  .footer {
     width: 768px;
     @include top-padding(15px);
     @include side-padding($padding-left-right-tablet);
     // @include side-padding($padding-left-right-tablet);
   }
 
-  .header__phone {
+  .footer__phone {
     font-size: 25px;
     line-height: 37px;
 
@@ -56,24 +56,24 @@
     }
   }
 
-  .header__logo img {
+  .footer__logo img {
     width: 120px;
     height: auto;
   }
 }
 
 @media (max-width: $mobile-width) {
-  .header {
+  .footer {
     flex-direction: column;
     width: 320px;
     @include side-padding($padding-left-right-mobile);
   }
 
-  .header__socials {
+  .footer__socials {
     margin-bottom: 10px;
   }
 
-  .header__phone {
+  .footer__phone {
     font-size: 25px;
     line-height: 37px;
 
